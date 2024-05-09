@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug-ubuntu
+spec:
+  volumes:
+    - name: workspace
+      emptyDir: {}
+  containers:
+    - name: debug-ubuntu
+      image: ubuntu:24.04
+      volumeMounts:
+        - name: workspace
+          mountPath: /workspace
+  dnsPolicy: Default
