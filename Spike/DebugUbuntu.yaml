@@ -12,4 +12,9 @@ spec:
       volumeMounts:
         - name: workspace
           mountPath: /workspace
+      command:
+        - "sleep"
+        - "604800"
+      imagePullPolicy: IfNotPresent
+      restartPolicy: Always
   dnsPolicy: Default
